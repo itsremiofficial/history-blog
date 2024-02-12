@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   /* width: 100vw;
   height: 100vh; */
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   object-fit: cover;
   background-position: center;
@@ -63,22 +63,27 @@ h1 {
   line-height: 1.1;
 }
 
+.btn-primary,
 button {
   border-radius: 0.8rem;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #2b2b2b;
   cursor: pointer;
   transition: background-color 0.25s;
   border: none;
   outline: none;
 }
+.btn-primary:hover,
 button:hover {
-  background-color: #161616;
+  background-color: #000000;
+  color: white;
 }
+.btn-primary:focus,
 button:focus,
+.btn-primary:focus-visible,
 button:focus-visible {
   outline: none;
 }
@@ -419,17 +424,22 @@ button:focus-visible {
 }
 
 .cover-img {
-  padding: 10vw 3vw;
+  padding: 5vw 3vw;
   margin: 0;
 }
 
 .text-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .text-container h2 {
   margin: 0;
-  padding-bottom: 2vw;
+  /* padding-bottom: 2vw; */
   font: 300 8vw/1 "Bely";
   color: #1f1f1f;
   white-space: nowrap;
@@ -554,6 +564,127 @@ figure figcaption {
   background: rgba(85, 85, 85, 0.986);
 }
 
+.post_author {
+  background: rgba(0, 0, 0, 0.035);
+  background-image: url(assets/noise_dark.svg);
+  padding: 2.5rem;
+  display: flex;
+  width: fit-content;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  border-radius: 4rem;
+  border: 2px solid rgba(245, 245, 245, 0.849);
+}
+
+.post_img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 25rem;
+  border: 2px solid rgba(255, 255, 255, 0.596);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.post_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 140%;
+  object-position: right;
+}
+
+.post_content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.author_header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.author_heading {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.3rem;
+  color: #616161;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.author_about {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.author_name {
+  font: 500 24px/1.3 "Bely", sans-serif;
+  color: #252525;
+  transition: all 0.3s;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+.author_desc {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.3rem;
+  color: #6d6d6d;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.author_social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-content: center;
+  gap: 2rem;
+}
+.author_social svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+}
+.author_social .svg-fill path {
+  fill: rgb(78, 78, 78);
+}
+.author_social .svg-fill:hover path {
+  fill: rgb(39, 39, 39);
+}
+
+.author_bio {
+  color: #696969;
+  font: 500 12px/1.6 "Roboto", sans-serif;
+  text-align: left;
+  width: 450px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+  text-align: justify;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+.margin-3 {
+  margin: 3rem;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   body {
@@ -566,7 +697,7 @@ figure figcaption {
     margin: 2rem 0;
     gap: 2rem;
   }
-  .container_inner{
+  .container_inner {
     gap: 2rem;
   }
   .card {
