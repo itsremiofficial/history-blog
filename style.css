@@ -494,7 +494,7 @@ figure figcaption {
   width: fit-content;
   font-weight: 500;
   z-index: 2;
-  transform: translate(10%, -180%);
+  transform: translate(10%, -230%);
   white-space: nowrap;
   padding: 0.5vw 1vw;
   backdrop-filter: blur(6px);
@@ -503,6 +503,8 @@ figure figcaption {
   background-image: url(assets/noise_dark.svg);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 2vw;
+  overflow: hidden;
+  line-height: 1;
 }
 
 /* .white-color {
@@ -523,7 +525,7 @@ figure figcaption {
   flex-basis: calc(33.33% - 2rem);
   max-width: calc(33.33% - 2rem);
   aspect-ratio: 3/5;
-  border-radius: 3rem;
+  border-radius: 2.5vw;
   margin: 0;
   overflow: hidden;
 }
@@ -535,15 +537,14 @@ figure figcaption {
 }
 
 @media screen and (max-width: 768px) {
-  figure.img-container {
-    border-radius: 1.3rem;
-  }
-  figure figcaption {
+  /* figure.img-container {
+    border-radius: 1.3vw;
+  } */
+  /* figure figcaption {
     font-size: 10px;
-    white-space: wrap;
-    width: 15vw;
+    width: fit-content;
     transform: translate(10%, -150%);
-  }
+  } */
   .d-flex figure {
     border-radius: 1.3rem;
   }
