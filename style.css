@@ -495,6 +495,7 @@ figure figcaption {
   font-weight: 500;
   z-index: 2;
   transform: translate(10%, -180%);
+  white-space: nowrap;
   padding: 0.5vw 1vw;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
