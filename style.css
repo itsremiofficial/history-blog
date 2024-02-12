@@ -488,10 +488,9 @@ figure.img-container {
 }
 
 figure figcaption {
-  font-size: 14px;
+  font-size: 1vw;
   font-family: "Roboto", sans-serif;
   color: #111111;
-  /* position: absolute; */
   width: fit-content;
   font-weight: 500;
   z-index: 2;
