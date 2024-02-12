@@ -131,6 +131,7 @@ button:focus-visible {
   body {
     justify-content: flex-start;
     height: auto;
+    align-items: center;
   }
   .container{
     flex-direction: column;
@@ -138,14 +139,10 @@ button:focus-visible {
   }
   .card{
     flex-direction: column;
+    padding: 1.5rem;
   }
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    align-items: center;
-  }
-}
 
 .card_header {
   display: flex;
