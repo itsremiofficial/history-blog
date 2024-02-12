@@ -564,6 +564,10 @@ figure figcaption {
   .container {
     flex-direction: column;
     margin: 2rem 0;
+    gap: 2rem;
+  }
+  .container_inner{
+    gap: 2rem;
   }
   .card {
     flex-direction: column;
