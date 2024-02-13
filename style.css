@@ -567,14 +567,22 @@ figure figcaption {
 .post_author {
   background: rgba(0, 0, 0, 0.035);
   background-image: url(assets/noise_dark.svg);
-  padding: 2.5rem;
+  padding: 1rem;
   display: flex;
-  width: fit-content;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   border-radius: 4rem;
   border: 2px solid rgba(245, 245, 245, 0.849);
+}
+
+.author_inner {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0rem 1rem 0.3rem 1rem;
 }
 
 .post_img {
@@ -709,5 +717,71 @@ figure figcaption {
 
   .card_img {
     border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .post_author {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 2rem;
+  }
+  .article {
+    border-radius: 1.3rem;
+  }
+  figure.img-container {
+    border-radius: 1.3rem;
+  }
+  .d-flex figure{
+    border-radius: 0.7rem;
+  }
+  .author_inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .post_img {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .post_content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .author_header {
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .author_about {
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    gap: 0.3rem;
+  }
+  .author_about > * {
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap: 0;
+  }
+
+  .author_bio {
+    width: 250px;
+    -webkit-line-clamp: 5;
   }
 }
