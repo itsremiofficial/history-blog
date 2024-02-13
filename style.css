@@ -1,10 +1,13 @@
 @charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+
 @font-face {
   font-family: "Bely";
   src: url("fonts/galin/bely.ttf") format("truetype");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   font-family: "Roboto", system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -179,7 +182,7 @@ button:focus-visible {
   align-items: center;
   text-transform: uppercase;
   font-size: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
   font-weight: 400;
   vertical-align: middle;
   text-align: center;
@@ -235,6 +238,22 @@ button:focus-visible {
   font-weight: 900;
   display: flex;
   align-items: center;
+}
+
+
+.time-date {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: #1d1d1d;
+  padding: 0.051rem 0rem !important;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: right;
+  pointer-events: none;
 }
 
 .card_footer {
@@ -346,18 +365,18 @@ button:focus-visible {
   height: 24px;
 }
 .svg-fill path {
-  fill: rgba(255, 255, 255, 0.555);
+  fill: rgba(48, 48, 48);
 }
 .svg-fill:hover path {
-  fill: rgba(255, 255, 255, 1);
+  fill: rgb(15, 15, 15);
 }
 
 .social_heading {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   margin-bottom: 0.3rem;
-  color: #1b1b1b;
-  font-weight: 800;
+  color: #161616;
+  font-weight: 900;
 }
 
 .social_links {
@@ -532,19 +551,6 @@ figure figcaption {
   height: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  /* figure.img-container {
-    border-radius: 1.3vw;
-  } */
-  /* figure figcaption {
-    font-size: 10px;
-    width: fit-content;
-    transform: translate(10%, -150%);
-  } */
-  .d-flex figure {
-    border-radius: 1.3rem;
-  }
-}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -717,6 +723,12 @@ figure figcaption {
 
   .card_img {
     border-radius: 1rem;
+  }
+  .profile{ 
+    transform: perspective(1000px) rotateY(0deg);;
+  }
+  .profile_desc{
+    width: 250px;
   }
 }
 
